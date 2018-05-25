@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0" />
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+    <meta content="telephone=no" name="format-detection" />
+    <title>I.T VIP</title>
+    <link rel="stylesheet" href="public/css/it.style.css" />
+    <link rel="stylesheet" href="public/fonts/font.style.css" />
+    <link rel="stylesheet" href="public/fonts/iconfont.css" />
+    <link rel="stylesheet" href="public/css/nprogress.css" />
+    <script src="public/js/nprogress.js"></script>
+</head>
+<body>
+<script>
+    NProgress.start();
+</script>
+    <div class="bodyMain" style="background:#fff">
+
+        <div class="mainBox bab-main-index">
+            <div class="vipMain mainCss">
+                <img src="public/images/index_logo.png">
+                <div class="vipBox">
+                    <div class="vipPadd bab-index-vippadd">
+                        <div class="vipCode">
+                            <img src="public/images/index-code_03.png">
+                        </div>
+
+                        <div class="vipNum">
+                            <div class="bab-indx-vip-type">GOLD</div>
+                            <div class="vipNumMain">
+                                <div class="left">136 31407 776</div>
+                                <div class="left">I.TSV000001</div>
+                                <div class="clear"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="vipInfoMain" style="display: none;">
+                    <div class="vipInfo">
+                        <div class="vipPadd">
+                            <div class="vipColse">
+                                <img src="public/images/index_small_circle_03.png">
+                            </div>
+                            <div class="vipInfo-main">
+                                <div class="vip-bar">
+                                    <img src="public/images/person-scan_06.png">
+                                </div>
+                                <div class="vip-code">
+                                    <img src="public/images/code_c_07.jpg">
+                                </div>
+                                <p class="vip-code-p">入会时间-2017/2/19</p>
+                            </div>
+                        </div>
+                        <div class="vipNum">
+                            <div class="vipNumMain">
+                                <div class="left">136 31407 776</div>
+                                <div class="left">I.TSV000001</div>
+                                <div class="clear"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="bab-index-bottom">
+            <div class="vipmate">
+                <div class="left bab-index-person-new">
+                    <div class="bab-index-personal">
+                        <a href="personal.html">
+                            <img src="public/images/personal_all_03.png">
+                            <div class="scrollMain">
+                                <p>个人资料</p>
+                                <div class="right scrollText">56%</div>
+                                <div class="left scroll-left">
+                                    <div class="scrollBox">
+                                        <div class="scroll-bg"></div>
+                                        <div class="scroll" style="width:0%;"></div>
+                                    </div>
+                                </div>
+                                <div class="clear"></div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="bab-index-line"></div>
+                    <div class="bab-index-new">
+                        <a href="new1.html">
+                            <img src="public/images/news_all_11.png">
+                            <div class="newMain">
+                                <p>最新资讯</p>
+                                <span class="newMain-message">999条未读信息</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="left">
+                    <div class="integralMain">
+                        <div class="int-box">
+                            <a href="I.TOKEN.html">
+                                <img src="public/images/integral_all_06.png">
+                                <div class="int-text">
+                                    <p class="int1">会员积分</p>
+                                    <p class="int3">12000</p>
+                                    <span class="int-jf">30天内将要到期1200积分</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </div>
+
+        </div>
+        <ul class="main-nav">
+            <li>
+                <a href="record.html" class="r1">
+                    <img src="public/images/record_all_15.png">
+                    <p>消费记录</p>
+                </a>
+            </li>
+            <li>
+                <a href="offer.html" class="r2">
+                    <img src="public/images/offer_all_17.png">
+                    <p>专属优惠</p>
+                </a>
+            </li>
+            <li>
+                <a href="interests.html" class="r3">
+                    <img src="public/images/benfits_all_19.png">
+                    <p>会员权益</p>
+                </a>
+            </li>
+            <li class="bab-index-check-noborder">
+                <a href="javascript:void(0)" class="checkIn r4">
+                    <img src="public/images/checkin_all3.png">
+                    <p>签到打卡</p>
+                </a>
+            </li>
+        </ul>
+
+        <div class="mainBg-index"></div>
+    </div>
+    <script src="public/js/jquery.min.js"></script>
+    <script src="public/js/common.js"></script>
+    <script>
+    window.onload=function(){
+        NProgress.done();
+    }
+    </script>
+    <script>
+        var $mainBg = $('.mainBg-index');
+        //关闭code信息
+        $(document).on('click', '#vipInfoMain .vipColse img', function () {
+            vipMainCo();
+            var $babMainIndex = $('.bab-main-index');
+            $babMainIndex.css("background","#fff");
+
+        });
+        $(document).on('click', '.mainBg-index', function () {
+            vipMainCo();
+        });
+
+        function vipMainCo() {
+            $mainBg.hide();
+            var $vipInfoMain = $('#vipInfoMain');
+            $vipInfoMain.addClass('vipInfoMain');
+            setTimeout(function () {
+                $vipInfoMain.hide();
+                $vipInfoMain.removeClass('vipInfoMain');
+            }, 1000);
+        }
+        //展开code信息
+        $(document).on('click', '.vipMain .vipCode img', function () {
+            $mainBg.show();
+            var $babMainIndex = $('.bab-main-index');
+            $babMainIndex.css("background","#000");
+            var $vipInfoMain = $('#vipInfoMain');
+            $vipInfoMain.addClass('vipInfoMain2');
+            $vipInfoMain.show();
+            setTimeout(function () {
+                $vipInfoMain.removeClass('vipInfoMain2');
+            }, 1000);
+        });
+        //签到
+        $(document).on('click', '.checkIn', function () {
+
+            $.ajax({
+                url: 'url', //递交的路径
+                type: "post",
+                data: {
+                    checkIn: 1
+                },
+                contentType: "application/x-www-form-urlencoded; charset=utf-8",
+                dataType: "json",
+                success: function (data) {
+                    if (data != "") {
+                        var integral = 0.203; //测试数据 0.203
+                        var $int3 = $('.int3');
+                        var int3 = (Number($int3.html()) + 0.203).toFixed(2);
+                        $int3.html(int3);
+                        alertHtml('签到成功!');
+                        return false;
+                    }
+                }
+            });
+
+        });
+        setTimeout(function () {
+            var str = 0;
+            var $scrollText = $('.scrollText');
+            var end = parseFloat($scrollText.html().toString());
+            console.log(end);
+            var lt = setInterval(function () {
+                str = str + 1;
+                if (str > end || str > 100) {
+                    clearInterval(lt);
+                    return false;
+                }
+                $('.scroll').css('width', str + '%');
+                $scrollText.html(str + '%')
+            }, 50);
+        }, 1000);
+    </script>
+</body>
+
+</html>
